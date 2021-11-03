@@ -14,4 +14,4 @@ $TTL	604800
 @	IN	AAAA	::1
 ns  IN  A   172.27.0.2
 ggg	IN	A	19.80.89.88
-maquina1	IN 	A 	19.80.89.83
+maquina1	IN 	A 	19.80.89.82
