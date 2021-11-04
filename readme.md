@@ -8,7 +8,7 @@ Donde descomentamos las siguientes líneas:
 ~~~
 forwarders {
     8.8.8.8;
-	4.4.4.4;
+    4.4.4.4;
 };
 ~~~
 Dichas líneas indican al servidor, que las ips indicadas son los servidores dns a los cuales enviaremos una solicitud dns, si no podemos resolver nosotros mismos una petición.
@@ -69,7 +69,7 @@ dig ggg.example.com
 Realizamos una solicitud dns, pregúntando por la ip de dicho dominio. Aunque en un principio en la información del comando dig, aparece que el servidor de respuesta es el 127.0.0.11
 No hay que procuparse, ya que dicho comportamiento se debe al funcionamiento servicio systemd encargado de la configuración.
 
-Como prueba del buen funcionamiento, a la petición dig realizada anteriormente, se obtuvo una respuesta satisfactoria, con la ip de dicho dominio. Otro sistema de comprobación es ejecutar el siguiente comando:
+Como prueba del buen funcionamiento, a la petición dig realizada anteriormente, se obtuvo una respuesta satisfactoria, con la ip del dominio solicitado, lo cual indica que el sistema esta trabajando correctamente. Otro sistema de comprobación es ejecutar el siguiente comando:
 ~~~
 ping ggg.example.com
 ~~~
