@@ -11,7 +11,7 @@ forwarders {
     4.4.4.4;
 };
 ~~~
-Dichas líneas indican al servidor, que las ips indicadas son los servidores dns a los cuales enviaremos una solicitud dns, si no podemos resolver nosotros mismos una petición.
+Dichas líneas indican al servidor, que las ips especificadas, son los servidores dns a los cuales enviaremos una solicitud, en caso de no poder resolverlo nosotros mismos.
 
 Para confirmar los datos, es primordial reiniciar el servicio (contenedor), para ello, desde una terminal, introducimos:
 ~~~
@@ -29,10 +29,8 @@ zone "example.com" {
     file "/etc/bind/db.example.com";
 };
 ~~~
-
-~~~
 Creamos el archivo db.example.com el cual contiene toda la configuración de la zona:
-
+~~~
 ;
 ; BIND data file for example.com
 ;
@@ -68,9 +66,9 @@ dig ggg.example.com
 ~~~
 Realizamos una solicitud dns, pregúntando por la ip de dicho dominio. Aunque en un principio en la información del comando dig, aparece que el servidor de respuesta es el 127.0.0.11. No hay que procuparse, ya que dicho comportamiento se debe al funcionamiento servicio systemd encargado de la configuración.
 
-Como prueba del buen funcionamiento, a la petición dig realizada anteriormente, se obtuvo una respuesta satisfactoria, con la ip del dominio solicitado, lo cual indica que el sistema esta trabajando correctamente. Otro sistema de comprobación es ejecutar el siguiente comando:
+Como prueba del buen funcionamiento, a la petición dig realizada anteriormente, se obtuvo una respuesta satisfactoria, con la ip del dominio solicitado, lo cual indica que el sistema está trabajando correctamente. Otro sistema de comprobación, es ejecutar el siguiente comando:
 ~~~
 ping ggg.example.com
 ~~~
 
-Si el ping se ejecuta correctamente, indica que el servidor responde correctamente a las peticiones dns y que la configuración esta realizada correctamente.
+Si el ping se ejecuta sin problemas, indica que el servidor responde correctamente a las peticiones dns y que la configuración está realizada correctamente.
