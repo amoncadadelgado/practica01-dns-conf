@@ -48,12 +48,18 @@ $TTL	604800
 ns  IN  A   172.27.0.2
 ggg	IN	A	19.80.89.88
 maquina1	IN 	A 	19.80.89.82
+ggg IN	TXT	"Aqui va un token de seguridad"
+owo	IN	CNAME	maquina1
 ~~~
 Donde se establece con el registro SOA:
 - nombre del servidor maestro: example.com. 
 - correo electronico del administrador 
 
 En las líneas inferios se establecen los registros dns que solucionara nuestro servidor. Hay que recordar establecer el ns.example.com. y otorgarle su ip correspondiente (responsable de la zona).
+
+Se añade un registro TXT, el cual otorga información cuando se realiza una consulta dig TXT.
+
+Se añade un registro CNAME, para generar un alias, donde maquina1, se asocia con ooo.
 
 Para confirmar los datos, es primordial reiniciar el servicio (contenedor), para ello, desde una terminal, introducimos:
 ~~~

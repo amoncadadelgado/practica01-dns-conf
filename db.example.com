@@ -15,3 +15,5 @@ $TTL	604800
 ns  IN  A   172.27.0.2
 ggg	IN	A	19.80.89.88
 maquina1	IN 	A 	19.80.89.82
+ggg IN	TXT	"Aqui va un token de seguridad"
+ooo	IN	CNAME	maquina1
